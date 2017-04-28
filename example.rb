@@ -71,9 +71,9 @@ config = ConfMaker::define_options [
         )
     ]
 
-#merge specified command line options into default
+#override defaults with command line
 config.merge! ConfSources::CommandLine.new
-#validation
+#validation - should be called if all merged
 config.validate!
 #get option with name :names
 p config[:names].get
