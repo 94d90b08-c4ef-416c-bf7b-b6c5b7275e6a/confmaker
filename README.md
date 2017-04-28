@@ -4,7 +4,7 @@ Gem get config from code (default), command line and YAML file(s) and
 provide way to use it in code as cooked objects  
 
 
-## It allows
+## It can
 - describe multiple options with default values, validators and parsers (getters)
 
 > only String, Bool and Array-like options supported
@@ -19,7 +19,7 @@ provide way to use it in code as cooked objects
 - parse too complex options (hash, file, io, ...)
 - use other sources than code, file and command line
 
-##Example
+## Example
 See example.rb  
 
 ## Option fields
@@ -39,7 +39,7 @@ Each option just a hash, so here describes keys that expected in it
 > **:getter** not require if no needed to cook :value when return it  
 > other type-specific fields above  
 
-##Option Types
+## Option Types
 Option used to cook from raw value from files, command line in some in-code usable  
 ### Standard
 - it just a prototype - not usable in most cases
@@ -65,5 +65,3 @@ Option used to cook from raw value from files, command line in some in-code usab
   + **:env_names** - join that array with values
   + **:env_name**  - joined **:value** mapped to **:env_name**
   + **:name** mapper to value
-
-
