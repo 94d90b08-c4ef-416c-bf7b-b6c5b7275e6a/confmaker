@@ -49,7 +49,7 @@ module ConfOptions
             self[:validator].call(self,context) if self[:validator].is_a? Proc
         end
         def to_s
-            self[:name].to_s.capitalize.gsub('_',' ') + ': ' + self[:value].to_s
+            (self[:env_name] ? self[:env_name] : self[:name] ).to_s.capitalize.gsub('_',' ') + ': ' + self[:value].to_s
         end
     private
         def default_getter
