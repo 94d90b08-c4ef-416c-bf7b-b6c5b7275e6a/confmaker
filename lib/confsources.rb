@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 #Sources is the raw-data config
 #It imay not valid, but can parse itself to hash
 module ConfSources
