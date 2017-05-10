@@ -41,9 +41,15 @@ module ConfSources
                 el.validate! Clone.new(self)
             }
         end
+        #array of option hashes (including names, desc and so on)
         def to_a
             @options.collect{ |opt| opt.to_h }
         end
+        #hash with parsed values
+        def to_h
+            @options.inject({}){|rez,opt| rez.merge opt.get}
+        end
+        #:name => :value hash
         def to_pairs
             @options.collect{ |opt| opt.to_pair }.to_h
         end

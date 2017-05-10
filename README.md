@@ -13,6 +13,7 @@ provide way to use it in code as cooked objects
 - make default config, file-based config and command line config
 - merge them all in any sequence to produce clear config as result
 - export config into bash environment script or use it in ruby
+- produce more usable config form than ConfSource object (Array, Hash)
 
 ## It canT
 - add options not mentioned in code (defaults)
