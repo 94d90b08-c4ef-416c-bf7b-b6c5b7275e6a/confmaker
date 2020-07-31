@@ -3,6 +3,10 @@ Gem to make configuration options scope
 Gem get config from code (default), command line and YAML file(s) and
 provide way to use it in code as cooked objects  
 
+## Develop
+```
+gem build confmaker.gemspec && gem install ./confmaker-*.gem && rm confmaker-*.gem
+```
 
 ## It can
 - describe multiple options with default values, validators and parsers (getters)
