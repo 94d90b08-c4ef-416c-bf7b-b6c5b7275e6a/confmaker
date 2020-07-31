@@ -73,11 +73,16 @@ config = ConfMaker::define_options [
 
 #override defaults with command line
 config.merge! ConfSources::CommandLine.new
-#validation - should be called if all merged
+#validation - can be called if all merged
 config.validate!
 #get option with name :names
 p config[:names].get
-#or just raw value
+#get and merge each option into single hash
+config.to_h
+#or just single raw value
 p config[:join_them][:value]
-puts  config.to_s
+#get array of hashed options (contains types, validator, getter and so on)
+config.to_a
+#Human-readable representation
+puts config.to_s
 
